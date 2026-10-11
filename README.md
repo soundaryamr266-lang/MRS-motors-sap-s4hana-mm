@@ -60,8 +60,21 @@ Below is the sequential transaction execution cycle tracking a single production
 ### Purchase Order Contract Screen (`ME23N`)
 ![Purchase Order](screenshots/06_purchase_order.png)
 
-### Live Stock/Requirements Ledger (`MD04 View`)
+### Warehouse Goods Receipt Logistics Ledger (`MIGO`)
+![Goods Receipt](screenshots/07_goods_receipt.png)
+
+### Invoice Verification Posting (`MIR4`)
+![Invoice Verification](screenshots/08_invoice_verification.png)
+
+### Subcontracting Contract Setup View (`ME23N`)
+![Subcontracting PO](screenshots/09_subcontract_po.png)
+
+### Live Stock Overview Cross-Plant Tree (`MMBE`)
+![Stock Overview](screenshots/10_stock_overview.png)
+
+### Live Stock/Requirements Planning Ledger (`MD04 View`)
 ![Live MRP Status](screenshots/11_mrp_ledger.png)
+
 
 ---
 
