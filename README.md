@@ -52,13 +52,13 @@ Below is the sequential transaction execution cycle tracking a single production
 ![Supplier BP Setup](screenshots/03_supplier_bp.png)
 
 ### Purchase Requisition Screen (`ME53N`)
-![Purchase Requisition](./04_purchase_req.png)
+![Purchase Requisition](screenshots/04_purchase_req.png)
 
-### Price Comparison Matrix Matrix (`ME49`)
-![Price Comparison](./05_price_comparison.png)
+### Price Comparison Matrix (`ME49`)
+![Price Comparison](screenshots/05_price_comparison.png)
 
 ### Purchase Order Contract Screen (`ME23N`)
-![Purchase Order](./06_purchase_order.png)
+![Purchase Order](screenshots/06_purchase_order.png)
 
 ### Warehouse Goods Receipt Logistics Ledger (`MIGO`)
 ![Goods Receipt](screenshots/07_goods_receipt.png)
@@ -74,7 +74,6 @@ Below is the sequential transaction execution cycle tracking a single production
 
 ### Live Stock/Requirements Planning Ledger (`MD04 View`)
 ![Live MRP Status](screenshots/11_mrp_ledger.png)
-
 
 ---
 
