@@ -60,6 +60,7 @@ Below is the sequential transaction execution cycle tracking a single production
 ### Purchase Order Contract Screen (`ME23N`)
 ![Purchase Order](screenshots/06_purchase_order.png)
 
+
 ### Warehouse Goods Receipt Logistics Ledger (`MIGO`)
 ![Goods Receipt](screenshots/07_goods_receipt.png)
 
