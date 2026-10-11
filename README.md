@@ -51,7 +51,7 @@ Below is the sequential transaction execution cycle tracking a single production
 
 ### Business Partner Supplier Setup (`BP`)
 
-![Supplier BP Setup](./screenshots/03_supplier_bp.png)
+![Supplier BP Setup](screenshots/ 03_supplier_bp.png)
 
 ### Purchase Requisition Screen (`ME53N`)
 
