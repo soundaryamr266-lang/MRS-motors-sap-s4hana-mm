@@ -85,7 +85,6 @@ Below is the sequential transaction execution cycle tracking a single production
 
 ![Live MRP Status](./screenshots/11_mrp_ledger.png)
 
-
 ---
 
 ## 🛠️ 4. Project Issues & Functional Fixes Log
