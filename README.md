@@ -49,17 +49,16 @@ Below is the sequential transaction execution cycle tracking a single production
 ![Material Master](screenshots/02_material_master.png)
 
 ### Business Partner Supplier Setup (`BP`)
-![Supplier BP Setup](screenshots/03_supplier_bp.png)
+![Supplier BP Setup](03_supplier_bp.png)
 
 ### Purchase Requisition Screen (`ME53N`)
-![Purchase Requisition](screenshots/04_purchase_req.png)
+![Purchase Requisition](04_purchase_req.png)
 
 ### Price Comparison Matrix Matrix (`ME49`)
-![Price Comparison](screenshots/05_price_comparison.png)
+![Price Comparison](05_price_comparison.png)
 
 ### Purchase Order Contract Screen (`ME23N`)
-![Purchase Order](screenshots/06_purchase_order.png)
-
+![Purchase Order](06_purchase_order.png)
 
 ### Warehouse Goods Receipt Logistics Ledger (`MIGO`)
 ![Goods Receipt](screenshots/07_goods_receipt.png)
