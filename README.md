@@ -126,3 +126,7 @@ Aspiring SAP MM Functional Consultant | SAP S/4HANA | Procurement | Inventory Ma
 
 [LinkedIn Profile](https://www.linkedin.com/in/soundarya-mr-962b61374)
 
+## 📸 Project Screenshots
+
+Screenshots demonstrating hands-on SAP S/4HANA MM practice activities are available in the [Screenshots Folder](./screenshots/).
+
