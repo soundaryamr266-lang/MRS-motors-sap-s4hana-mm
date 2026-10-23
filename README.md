@@ -1,103 +1,127 @@
-# SAP S/4HANA Materials Management (MM) Implementation
-**Enterprise Blueprint & Automation Portfolio** | **Client Case Study:** MRS Motors India Pvt. Ltd.
+# MRS Motors Pvt. Ltd. – SAP S/4HANA MM Practice Project
 
-An end-to-end, streamlined functional implementation of the SAP S/4HANA Materials Management module. This project details the enterprise architecture configuration, core procurement tracks, and inventory automation cycles executed within a multi-plant automotive manufacturing environment.
+## Project Overview
 
----
+This project documents hands-on practice in SAP S/4HANA Materials Management (MM) using a fictional automotive manufacturing business, MRS Motors Pvt. Ltd.
 
-## 🏢 1. Enterprise Structure & Master Data
+The business scenario focuses on managing material procurement, supplier data, inventory movements, invoice verification, and special procurement processes through SAP MM.
 
-### Enterprise Blueprint Configuration
-* **Company Code:** `AU88` (MRS Motors Finance)
-* **Plant 1:** `AU81` (Car Assembly Plant - Pune)
-* **Plant 2:** `AU82` (Components Plant - Mumbai)
-* **Purchasing Organization & Group:** `AU88`
-* **Controlling Assignment:** Assigned Company Code `AU88` to Controlling Area `AU88` and activated indicators for Fiscal Year 2026.
+**Project Type:** SAP MM Hands-on Practice Project  
+**ERP System:** SAP S/4HANA  
+**Domain:** Automotive Manufacturing  
+**Project Period:** October 2026
 
-### Core Master Data Records
-* **Raw Materials (ROH):** Steel Sheets (`100002220`), Aluminium Ingots (`100002221`)
-* **Semi-Finished Components (HALB):** Automotive Tyres (`100002222`)
-* **Consumables (HIBE):** Engine Lubricant Oil (`100002224`)
-* **Suppliers Setup:** Established separate Business Partners (BP Roles: `FLVN00` / `FLVN01`) mapped to automated G/L Trade Payables.
+## Business Scenario
 
----
+MRS Motors Pvt. Ltd. requires raw materials, components, spare parts, and other supplies for its manufacturing operations. The company needs a structured process to maintain material and supplier records, purchase materials, receive deliveries, monitor inventory, and verify supplier invoices.
 
-## 🔄 2. End-to-End Core Procurement Process Flow
-Below is the sequential transaction execution cycle tracking a single production raw material batch through the standard purchasing lifecycle:
+This project explores how SAP S/4HANA MM supports these business activities through procurement and inventory management transactions.
 
-### `PR (ME51N)` ➔ `PO (ME21N)` ➔ `GR (MIGO)` ➔ `Invoice (MIRO)` ➔ `Stock View (MMBE/MD04)`
+## Project Objectives
 
-### Phase 1: Internal Request & Contract Sourcing
-1. **Purchase Requisition `[ME51N]`**: Logged internal factory demand for 500 KG of raw input components (PR: `0005000024`).
-2. **Request for Quotation `[ME41 / ME49]`**: Issued inquiries to both regular vendors (RFQ: `6000000027`). Executed an automated price comparison matrix report to select the optimal bid (15 RS vs 18 RS) and flagged the losing quote with a formal Rejection Indicator.
-3. **Purchase Order `[ME21N]`**: Generated the legal supply contract with reference to the winning RFQ layout (PO: `450000109`).
+- Understand SAP MM enterprise structure and organizational assignments.
+- Practise material and supplier master data maintenance.
+- Execute purchasing and procurement transactions.
+- Manage goods movements and monitor stock.
+- Practise invoice verification.
+- Understand subcontracting and stock transport processes.
+- Review material requirements and purchasing documents.
+- Practise identifying and resolving common transaction errors.
 
-### Phase 2: Logistics & Valuation Fulfillment
-4. **Goods Receipt `[MIGO - Movement Type 101]`**: Logged physical arrival at the factory gates to move the materials cleanly into warehouse storage (Material Doc: `6000029`).
-5. **Invoice Verification `[MIRO]`**: Processed the incoming supplier invoice to balance out a formal Three-Way Match against the contract values (Invoice Doc: `5105600761`).
-6. **Stock Requirements Evaluation `[MMBE / MD04]`**: Audited the live material ledger sheets to verify unrestricted inventory access balances.
+## Hands-on Activities Performed
 
----
+### 1. Enterprise Structure
 
-## 🖼️ 3. Live System Execution Evidence
+- Created and assigned enterprise structure elements.
+- Practised organizational assignments for company code, plants, storage locations, and purchasing organizational elements.
+- Explored the organizational structure used in SAP MM.
 
-### Enterprise Structure Setup
+*Note: Full configuration of all enterprise structure elements was not completed.*
 
-![Enterprise Structure](./screenshots/01_enterprise_structure.png)
+### 2. Master Data
 
-### Material Master Production Version Configuration (`MM02`)
+- Created material master records.
+- Created supplier master records using Business Partner.
+- Practised maintaining purchasing info records.
 
-![Material Master](./screenshots/02_material_master.png)
+### 3. Procurement – Procure-to-Pay (P2P)
 
-### Business Partner Supplier Setup (`BP`)
+- Created Purchase Requisitions (PR).
+- Created Requests for Quotation (RFQ).
+- Maintained and compared supplier quotations.
+- Created Purchase Orders (PO).
+- Practised the procurement process from purchasing requirements to order creation.
 
-![Supplier BP Setup](screenshots/ 03_supplier_bp.png)
+### 4. Inventory Management
 
-### Purchase Requisition Screen (`ME53N`)
+- Posted goods receipts using MIGO.
+- Practised goods issue and inventory transfer postings.
+- Transferred stock between storage locations.
+- Practised stock transfer scenarios between plants.
+- Reviewed stock quantities and stock availability.
 
-![Purchase Requisition](./screenshots/04_purchase_req.png)
+### 5. Invoice Verification
 
-### Price Comparison Matrix (`ME49`)
+- Practised supplier invoice verification using MIRO.
+- Reviewed purchasing documents and invoice-related transaction details.
+- Encountered and investigated transaction posting and invoice balance errors during practice.
 
-![Price Comparison](./screenshots/05_price_comparison.png)
+### 6. Special Procurement
 
-### Purchase Order Screen (`ME23N`)
+**Subcontracting**
+- Created a finished material and maintained its Bill of Materials (BOM).
+- Created a subcontracting Purchase Order using item category L.
+- Practised goods receipt and component consumption associated with subcontracting.
 
-![Purchase Order](./screenshots/06_purchase_order.png)
+**Stock Transport Order (STO)**
+- Practised stock transfer between plants using an STO scenario.
+- Reviewed the associated goods movement process.
 
-### Warehouse Goods Receipt (`MIGO`)
+### 7. MRP and Reports/Inquiries
 
-![Goods Receipt](./screenshots/07_goods_receipt.png)
+- Reviewed the Stock/Requirements List using MD04.
+- Checked material stock information using MMBE.
+- Displayed purchasing documents and material movement documents.
+- Used SAP transaction displays to review procurement and inventory information.
 
-### Invoice Verification (`MIR4`)
+## SAP Transactions Practised
 
-![Invoice Verification](./screenshots/08_invoice_verification.png)
+| Transaction | Purpose |
+|---|---|
+| SPRO | Explore SAP configuration and enterprise structure |
+| MM01 | Create material master |
+| BP | Maintain supplier master data |
+| ME11 | Create purchasing info record |
+| ME51N | Create Purchase Requisition |
+| ME41 | Create Request for Quotation |
+| ME47 | Maintain quotation |
+| ME49 | Compare quotations |
+| ME21N | Create Purchase Order |
+| MIGO | Post goods movements |
+| MIRO | Verify supplier invoice |
+| MMBE | Display stock overview |
+| MD04 | Display Stock/Requirements List |
+| CS01 | Create Bill of Materials |
 
-### Subcontracting PO (`ME23N`)
+## Key Learning Outcomes
 
-![Subcontracting PO](./screenshots/09_subcontract_po.png)
+- Understood the relationship between master data and procurement transactions.
+- Practised the SAP MM Procure-to-Pay process.
+- Gained hands-on experience with inventory management and stock transfers.
+- Understood basic subcontracting and stock transport scenarios.
+- Learned to review stock requirements and purchasing documents.
+- Practised troubleshooting common master data and transaction posting issues.
 
-### Stock Overview (`MMBE`)
+## Project Scope
 
-![Stock Overview](./screenshots/10_stock_overview.png)
+This is a self-directed SAP S/4HANA MM practice project based on a fictional automotive manufacturing scenario. It demonstrates the business processes and transactions practised in the SAP training environment.
 
-### MRP Status (`MD04`)
+It is not a live client implementation. Some configuration and advanced project activities remain outside the completed scope.
 
-![Live MRP Status](./screenshots/11_mrp_ledger.png)
+## Author
 
----
+**Soundarya M. R.**
 
-## 🛠️ 4. Project Issues & Functional Fixes Log
-*Key cross-module hurdles encountered during system deployment and the backend configuration paths used to resolve them (Critical Interview Insights):*
+Aspiring SAP MM Functional Consultant | SAP S/4HANA | Procurement | Inventory Management
 
-#### Error 1: Controlling Area does not exist for Company Code AU88
-* **Root Cause:** S/4HANA Logistics actions require immediate financial validation, but the newly generated custom company code was completely unmapped in the management accounting ledger tables.
-* **Resolution Path:** Navigated to backend transaction code **`OX19`** (Assign Company Code to Controlling Area), mapped company code `AU88` to standard controlling area node `AU88`, and accessed **`OKKP`** to explicitly activate cost center management components for Fiscal Year 2026.
-
-#### Error 2: OBYC Account Determination - Valuation Group/Class 3000 Blank Account
-* **Root Cause:** When running a Goods Receipt (`MIGO`), the logistics sub-ledger failed to pass stock value updates because it could not identify the proper destination General Ledger (G/L) accounts.
-* **Resolution Path:** Launched integration transaction code **`OBYC`**, accessed transaction keys **`BSX`** (Inventory Postings) and **`WRX`** (GR/IR Clearing), and mapped Valuation Class **`3000`** directly to the active standard asset accounts (`16000000` and `16059000`) under Chart of Accounts `YCOA`.
-
-#### Error 3: Subcontracting PO - Not possible to determine any components
-* **Root Cause:** When attempting an outsourced purchase order using item category `L`, the system failed to trigger the raw component requirement explosion because no active production variant pathway existed on S/4HANA.
-* **Resolution Path:** Extended the master material record views to include **MRP 4** using transaction **`MM01`**, navigated to the **Production Version** sub-screen, created variant version `V001`, and mapped it directly to the alternative Bill of Material (`BOM 1`) under usage code 1.
+[LinkedIn Profile](https://www.linkedin.com/in/soundaryamr-962b61374/)
