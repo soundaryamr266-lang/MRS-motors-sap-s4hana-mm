@@ -1,1 +1,1 @@
-This folder holds the SAP S/4HANA implementation proof screenshots for MRS Motors.
+This folder contains screenshots demonstrating the SAP S/4HANA MM hands-on practice activities completed for the fictional MRS Motors Pvt. Ltd. business scenario.
