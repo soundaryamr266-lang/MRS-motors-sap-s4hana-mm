@@ -126,7 +126,3 @@ Aspiring SAP MM Functional Consultant | SAP S/4HANA | Procurement | Inventory Ma
 
 [LinkedIn Profile](https://www.linkedin.com/in/soundarya-mr-962b61374)
 
-
-
-
-[LinkedIn Profile](https://www.linkedin.com/in/soundaryamr-962b61374/)
